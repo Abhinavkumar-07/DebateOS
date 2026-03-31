@@ -1,0 +1,50 @@
+/* ThinkingIndicator */
+.thinking-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.85rem;
+  font-weight: 500;
+  animation: slideUp 0.3s ease forwards;
+  margin: 0.5rem 0;
+}
+
+.thinking-pro {
+  background: var(--pro-bg);
+  border: 1px solid var(--pro-border);
+  color: var(--pro-secondary);
+}
+
+.thinking-def {
+  background: var(--def-bg);
+  border: 1px solid var(--def-border);
+  color: var(--def-secondary);
+}
+
+.thinking-judge {
+  background: var(--judge-bg);
+  border: 1px solid var(--judge-border);
+  color: var(--judge-secondary);
+}
+
+.thinking-icon {
+  font-size: 1rem;
+}
+
+.thinking-label {
+  flex: 1;
+}
+
+.thinking-dots {
+  display: flex;
+  gap: 1px;
+}
+
+.thinking-dots .dot {
+  font-size: 1.5rem;
+  font-weight: 700;
+  animation: typing-dot 1.2s infinite;
+  line-height: 0.5;
+}

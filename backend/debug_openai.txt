@@ -1,0 +1,1 @@
+ERROR: InternalServerError: Error code: 500 - {'error': {'message': 'Internal server error', 'type': 'internal_error', 'param': None, 'code': 'internal_error'}}

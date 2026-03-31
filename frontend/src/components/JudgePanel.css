@@ -1,0 +1,91 @@
+/* ═══════════════════════════════════════════════════════════
+   JudgePanel — Bottom panel with judge evaluations
+   ═══════════════════════════════════════════════════════════ */
+
+.judge-panel {
+  margin-top: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--judge-border);
+}
+
+.judge-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: var(--judge-gradient);
+  border-bottom: 1px solid var(--judge-border);
+}
+
+.judge-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.judge-icon {
+  font-size: 1.5rem;
+}
+
+.judge-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.judge-subtitle {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.judge-panel-body {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ─── Round Result ────────────────────────────────────────── */
+.judge-round-result {
+  padding: 1rem;
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+}
+
+.judge-result-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.judge-result-round {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--judge-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.judge-result-winner {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-xl);
+}
+
+.judge-confidence {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-left: auto;
+  font-family: var(--font-mono);
+}
+
+.judge-reasoning {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

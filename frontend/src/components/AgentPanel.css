@@ -1,0 +1,106 @@
+/* ═══════════════════════════════════════════════════════════
+   AgentPanel — PRO/DEF column
+   ═══════════════════════════════════════════════════════════ */
+
+.agent-panel {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 100%;
+  min-height: 400px;
+}
+
+.panel-pro {
+  border: 1px solid var(--pro-border);
+  background: rgba(59, 130, 246, 0.02);
+}
+
+.panel-def {
+  border: 1px solid var(--def-border);
+  background: rgba(239, 68, 68, 0.02);
+}
+
+/* ─── Header ──────────────────────────────────────────────── */
+.agent-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.header-pro {
+  background: var(--pro-gradient);
+}
+
+.header-def {
+  background: var(--def-gradient);
+}
+
+.agent-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.agent-icon {
+  font-size: 1.5rem;
+}
+
+.agent-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.agent-subtitle {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+.agent-round-count {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-xl);
+}
+
+/* ─── Body ────────────────────────────────────────────────── */
+.agent-panel-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.argument-group {
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Empty State ─────────────────────────────────────────── */
+.agent-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.agent-empty-icon {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.agent-empty p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

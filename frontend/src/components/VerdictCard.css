@@ -1,0 +1,240 @@
+/* ═══════════════════════════════════════════════════════════
+   VerdictCard — Final verdict overlay modal
+   ═══════════════════════════════════════════════════════════ */
+
+.verdict-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 6, 11, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+}
+
+.verdict-card {
+  max-width: 520px;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  border: 1px solid var(--judge-border);
+}
+
+/* ─── Crown ───────────────────────────────────────────────── */
+.verdict-crown {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -52px auto 1.25rem;
+  border: 3px solid var(--bg-primary);
+}
+
+.crown-pro {
+  background: var(--pro-gradient);
+  box-shadow: var(--shadow-glow-pro);
+}
+
+.crown-def {
+  background: var(--def-gradient);
+  box-shadow: var(--shadow-glow-def);
+}
+
+.crown-icon {
+  font-size: 1.8rem;
+}
+
+/* ─── Title & Claim ───────────────────────────────────────── */
+.verdict-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-bright);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.verdict-claim {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* ─── Winner ──────────────────────────────────────────────── */
+.verdict-winner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-xl);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.verdict-winner.winner-pro {
+  background: var(--pro-bg);
+  color: var(--pro-secondary);
+  border: 1px solid var(--pro-border);
+  box-shadow: var(--shadow-glow-pro);
+}
+
+.verdict-winner.winner-def {
+  background: var(--def-bg);
+  color: var(--def-secondary);
+  border: 1px solid var(--def-border);
+  box-shadow: var(--shadow-glow-def);
+}
+
+.verdict-winner-icon {
+  font-size: 1.3rem;
+}
+
+/* ─── Scores ──────────────────────────────────────────────── */
+.verdict-scores {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.verdict-score-card {
+  flex: 1;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.score-card-pro {
+  background: var(--pro-bg);
+  border: 1px solid var(--pro-border);
+}
+
+.score-card-def {
+  background: var(--def-bg);
+  border: 1px solid var(--def-border);
+}
+
+.verdict-score-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.verdict-score-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--text-bright);
+}
+
+.verdict-score-wins {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.verdict-score-divider {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* ─── Confidence ──────────────────────────────────────────── */
+.verdict-confidence {
+  margin-bottom: 1.25rem;
+}
+
+.confidence-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.confidence-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.confidence-value {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--judge-secondary);
+  font-family: var(--font-mono);
+}
+
+.confidence-track {
+  height: 8px;
+  background: var(--bg-elevated);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--judge-primary), var(--judge-secondary));
+  border-radius: 4px;
+  transition: width 1.5s ease;
+}
+
+/* ─── Summary ─────────────────────────────────────────────── */
+.verdict-summary {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* ─── Meta ────────────────────────────────────────────────── */
+.verdict-meta {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* ─── New Debate Button ───────────────────────────────────── */
+.verdict-new-btn {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-primary);
+  background: var(--judge-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.verdict-new-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow-judge);
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .verdict-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .verdict-scores {
+    flex-direction: column;
+  }
+
+  .verdict-score-divider {
+    display: none;
+  }
+}

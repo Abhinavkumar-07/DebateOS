@@ -1,0 +1,92 @@
+/* ═══════════════════════════════════════════════════════════
+   ArgumentBubble — Glassmorphic argument card
+   ═══════════════════════════════════════════════════════════ */
+
+.argument-bubble {
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-base);
+}
+
+.argument-bubble:hover {
+  transform: translateY(-2px);
+}
+
+.argument-pro {
+  background: var(--pro-bg);
+  border: 1px solid var(--pro-border);
+}
+
+.argument-pro:hover {
+  border-color: var(--pro-primary);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+}
+
+.argument-def {
+  background: var(--def-bg);
+  border: 1px solid var(--def-border);
+}
+
+.argument-def:hover {
+  border-color: var(--def-primary);
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.1);
+}
+
+/* ─── Header ──────────────────────────────────────────────── */
+.argument-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.argument-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-xl);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-pro {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--pro-secondary);
+}
+
+.badge-def {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--def-secondary);
+}
+
+/* ─── Body ────────────────────────────────────────────────── */
+.argument-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.argument-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.field-value {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}

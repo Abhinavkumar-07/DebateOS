@@ -1,0 +1,7 @@
+# Environment files
+.env
+*.env
+backend/.env
+
+# Local tooling
+.DS_Store

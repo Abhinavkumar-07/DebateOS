@@ -1,0 +1,11 @@
+# DebateOS Environment Configuration
+LLM_PROVIDER=gemini
+GEMINI_API_KEY=AIzaSyD-G1L-GTWkY-JzTpvy0-evyz6amTbQh3U
+GEMINI_MODEL=gemini-1.5-flash
+
+# Optional: keep OpenAI credentials empty unless needed
+#OPENAI_API_KEY=
+OPENAI_MODEL=gpt-4o-mini
+
+MAX_ROUNDS=3
+EARLY_STOP_CONFIDENCE=85
